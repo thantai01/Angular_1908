@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { RatingBarComponent } from './navbar/rating-bar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArtistComponent } from './artist/artist.component';
+import { AudiobarComponent } from './audiobar/audiobar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RatingBarComponent,
     DashboardComponent,
-    ArtistComponent
+    ArtistComponent,
+    AudiobarComponent
   ],
   imports: [
     BrowserModule,
