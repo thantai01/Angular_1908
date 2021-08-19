@@ -1,0 +1,18 @@
+<div class="container mt-2">
+  <div class="row">
+    <h2>Top Global Artist</h2>
+    <hr>
+  </div>
+  <div class="row">
+      <div class="col-3" *ngFor="let artist of artistList; index as i">
+        <table class="table table-light">
+          <tr>
+            <td style="width: 110px;"><a href="#" class="link-secondary">{{artist.name}}</a></td>
+            <img src="{{artist.imageURL}}" alt="" style="height: 180px;width: 200px"/>
+          </tr>
+        </table>
+      </div>
+    <a class="btn btn-outline-primary" href="https://www.theguardian.com/news/datablog/2013/apr/19/twitter-music-app-100-most-followed-musicians">See more</a>
+  </div>
+  <hr>
+</div>

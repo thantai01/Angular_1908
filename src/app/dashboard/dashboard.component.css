@@ -1,0 +1,16 @@
+#dashboard {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/casem4-a667f.appspot.com/o/%E2%80%94Pngtree%E2%80%94creative%20dream%20neon%20music_920101.jpg?alt=media&token=6145d4aa-c485-495a-bb37-b024c418cba3");
+  height: 700px !important;
+  /*width: 100%;*/
+  margin-left: -20px;
+  margin-right: -70px;
+  position: relative;
+}
+span {
+  color: white;
+  font-size: x-large;
+}
+
+.navbar .navbar-light .navbar-brand {
+  text-align-all: center;
+}
