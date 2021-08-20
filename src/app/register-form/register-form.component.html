@@ -1,0 +1,74 @@
+<p>register-form works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-8" >
+      <form class="form-control" [formGroup]="registerForm">
+        <div class="col form-outline">
+          <label for="username" class="form-label">User Name (*)</label>
+          <input type="text" class="form-control" id="username" formControlName="username" />
+          <div *ngIf="!getUserName()?.valid && (getUserName()?.dirty || getUserName()?.touched)">
+<!--            <div class="alert-warning" [hidden]="getUserName()?.errors">A</div>-->
+            <div class="alert-warning" [hidden]="getUserName()?.errors.user">This field is blank</div>
+          </div>
+        </div>
+        <div formGroupName="passGr">
+          <div class="col form-outline">
+            <label for="password" class="form-label">Password (*)</label>
+            <input type="password" class="form-control" id="password" formControlName="password" />
+          </div>
+          <div class="col form-outline">
+            <label for="rePassword" class="form-label">Confirm Password (*)</label>
+            <input type="password" class="form-control" id="rePassword" formControlName="confirm"/>
+          </div>
+          <div class="alert-warning" role="alert" *ngIf="registerForm.value.passGr.password!=registerForm.value.passGr.confirm">Password not match! Please check it</div>
+        </div>
+      <div class="row mb-4 mt-4">
+        <div class="col form-outline">
+          <label for="firstname" class="form-label">First Name (*)</label>
+          <input type="text" class="form-control" id="firstname" formControlName="firstname"/>
+        </div>
+        <div class="col form-outline">
+          <label for="firstname" class="form-label">Last Name (*)</label>
+          <input type="text" class="form-control" id="lastname" formControlName="lastname"/>
+        </div>
+        <div class="col form-outline">
+          <label for="dob" class="form-label">Date of Birth (*)</label>
+          <input type="date" class="form-control" id="dob" formControlName="dob"/>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col form-outline">
+          <label for="firstname" class="form-label">Email (*)</label>
+          <input type="email" class="form-control" id="email" formControlName="email"/>
+        </div>
+        <div class="col form-outline">
+            <div class="row">
+              <div class="col-5">
+                <label for="firstname" class="form-label">Country (*)</label>
+                <select class="form-select">
+                  <option> </option>
+                </select>
+              </div>
+              <div class="col-7">
+                <label for="firstname" class="form-label">Phone Number (*)</label>
+                <input type="text" class="form-control" id="phone" formControlName="phone"/>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <label for="favorite">What your favourite music genre</label>
+        <select class="col form-select" formControlName="favorite" id="favorite">
+          <option class="form-select" *ngFor="let genre of musicGenres" value="{{genre}}" >{{genre}}</option>
+          <option class="form-select" value="other">Other</option>
+        </select>
+        <p class="text-danger"> (*) Required</p>
+      </div>
+      <button class="form-control btn btn-outline-primary">Submit your information </button>
+      </form>
+    </div>
+    <div class="col-4"></div>
+    <div class="col-2"></div>
+  </div>
+</div>
+

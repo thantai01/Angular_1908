@@ -7,6 +7,8 @@ import { RatingBarComponent } from './navbar/rating-bar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArtistComponent } from './artist/artist.component';
 import { AudiobarComponent } from './audiobar/audiobar.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { AudiobarComponent } from './audiobar/audiobar.component';
     RatingBarComponent,
     DashboardComponent,
     ArtistComponent,
-    AudiobarComponent
+    AudiobarComponent,
+    RegisterFormComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
