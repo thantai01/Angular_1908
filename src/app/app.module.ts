@@ -9,6 +9,7 @@ import { ArtistComponent } from './artist/artist.component';
 import { AudiobarComponent } from './audiobar/audiobar.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { Timeline2208Component } from './timeline2208/timeline2208.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     DashboardComponent,
     ArtistComponent,
     AudiobarComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    Timeline2208Component
   ],
     imports: [
         BrowserModule,
