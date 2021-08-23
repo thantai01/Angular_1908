@@ -10,6 +10,8 @@ import { AudiobarComponent } from './audiobar/audiobar.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { Timeline2208Component } from './timeline2208/timeline2208.component';
+import { Playlist2308Component } from './playlist2308/playlist2308.component';
+import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { Timeline2208Component } from './timeline2208/timeline2208.component';
     ArtistComponent,
     AudiobarComponent,
     RegisterFormComponent,
-    Timeline2208Component
+    Timeline2208Component,
+    Playlist2308Component,
+    YoutubePlaylistComponent
   ],
     imports: [
         BrowserModule,
